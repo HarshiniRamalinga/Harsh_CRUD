@@ -11,22 +11,18 @@
                 <td>
                     <form onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off">
                         <div>
-                            <label>Full Name</label>
-                            <input type="text" name="fullName" placeholder="Enter name" id="fullName">
+                            <label>Full Name*</label>
+                            <!-- <label class="validation-error hide" id="fullNameValidationError">   Required</label> -->
+                            <input type="text" name="fullName" placeholder="Enter name" id="fullName" pattern="[a-zA-Z]{3,}" title="Enter only letters" required>
                         </div>
                         <div>
                             <label>Age</label>
-                            <input type="text" name="age" placeholder="Enter Age" id="age">
+                            <input type="number" name="age" placeholder="Enter Age" id="age" required> 
                         </div>
                         <div class="gender">
-                            <label>Gender</label><br>
-                            <select  name="hobby" id="gender">
-                                <option value="gender">Gender</option>
-                                <option value="Male">Male</option>
-                                <option value="Female">Female</option>
-                                <option value="others">others</option>
-                                
-                            </select>
+                            <label >Gender</label><br>    
+                            <input type="radio" name="gender" id="genderas" value="Male">Male
+                            <input type="radio" name="gender" id="gender" value="female">Female
                         </div>
                         <div>
                             <br>
@@ -47,7 +43,8 @@
                     </form>
                 </td>
                 <td>
-                    <table class="list" id="employeeList">
+                    <div class="scrollist">
+                    <table class="list" id="employeeList" >
                         <thead>
                             <tr>
                                 <th>Name</th>
@@ -61,6 +58,7 @@
 
                         </tbody>
                     </table>
+                    </div>
                 </td>
             </tr>
         </table>
