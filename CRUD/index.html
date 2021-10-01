@@ -13,16 +13,16 @@
                         <div>
                             <label>Full Name*</label>
                             <!-- <label class="validation-error hide" id="fullNameValidationError">   Required</label> -->
-                            <input type="text" name="fullName" placeholder="Enter name" id="fullName" pattern="[a-zA-Z]{3,}" title="Enter only letters" required>
+                            <input type="text" name="fullName" placeholder="Enter name" id="fullName" pattern="[a-zA-Z]{5,}" title="Enter only letters" required>
                         </div>
                         <div>
                             <label>Age</label>
-                            <input type="number" name="age" placeholder="Enter Age" id="age" required> 
+                            <input type="number" name="age" placeholder="Enter Age" max="60" id="age" required> 
                         </div>
                         <div class="gender">
                             <label >Gender</label><br>    
-                            <input type="radio" name="gender" class="gender" id="gender" value="Male">Male
-                            <input type="radio" name="gender" class="gender" id="gender" value="female">Female
+                            <input type="radio" name="gender" class="gender" id="male" value="Male">Male
+                            <input type="radio" name="gender" class="gender" id="female" value="female">Female
                         </div>
                         <div>
                             <br>
