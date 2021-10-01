@@ -1,11 +1,7 @@
 var selectedRow = null
 function onFormSubmit() {
-    
         var formData = readFormData();
-        if (selectedRow == null)
-            insertNewRecord(formData);
-        else
-            updateRecord(formData);
+        selectedRow == null ? insertNewRecord(formData) : updateRecord(formData);
         resetForm();   
 }
 function readFormData() {
