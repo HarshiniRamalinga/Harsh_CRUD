@@ -34,7 +34,9 @@ function insertNewRecord(data) {
 function resetForm() {
     document.getElementById("fullName").value = "";
     document.getElementById("age").value = "";
-    document.getElementById("gender").value = "";
+    var gender = document.getElementsByClassName("gender");
+    for(index = 0; index<gender.length; index++)
+        gender[index].checked = false;
     document.getElementById("hobby").value = "";
     selectedRow = null;
 }
