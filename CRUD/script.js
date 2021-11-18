@@ -3,6 +3,7 @@ function onFormSubmit() {
         var formData = readFormData();
         selectedRow == null ? insertNewRecord(formData) : updateRecord(formData);
         resetForm();   
+        
 }
 function readFormData() {
     var formData = {};
