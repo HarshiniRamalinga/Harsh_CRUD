@@ -31,8 +31,8 @@ function resetForm() {
     document.getElementById("fullName").value = "";
     document.getElementById("age").value = "";
     var gender = document.getElementsByClassName("gender");
-    for(var index = 0; index<gender.length; index++)
-        gender[index].checked = false;
+    for(let gen of gender)
+        gen.checked = false;
     document.getElementById("hobby").value = "";
     selectedRow = null;
 }
@@ -54,8 +54,9 @@ function updateRecord(formData) {
     selectedRow.cells[3].innerHTML = formData.hobby;
 }
 function onDelete(td) {
-    if(confirm("Are you sure to Delete this record?"))
+    if(confirm("Are you sure to Delete this record?")){
         var row = td.parentElement.parentElement;
         document.getElementById("employeeList").deleteRow(row.rowIndex);
         resetForm();
+    }
 }
