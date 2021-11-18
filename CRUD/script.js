@@ -15,15 +15,15 @@ function readFormData() {
 function insertNewRecord(data) {
     var table = document.getElementById("employeeList").getElementsByTagName('tbody')[0];
     var newRow = table.insertRow(table.length);
-    cell1 = newRow.insertCell(0);
+    var cell1 = newRow.insertCell(0);
     cell1.innerHTML = data.fullName;
-    cell2 = newRow.insertCell(1);
+    var cell2 = newRow.insertCell(1);
     cell2.innerHTML = data.age;
-    cell3 = newRow.insertCell(2);
+    var cell3 = newRow.insertCell(2);
     cell3.innerHTML = data.gender;
-    cell4 = newRow.insertCell(3);
+    var cell4 = newRow.insertCell(3);
     cell4.innerHTML = data.hobby;
-    cell5 = newRow.insertCell(4);
+    var cell5 = newRow.insertCell(4);
     cell5.innerHTML = ` <button id="btn1" onClick="onEdit(this)">Edit</button>
                         <button id="btn2" onClick="onDelete(this)">Delete</button>`;
 }
@@ -31,7 +31,7 @@ function resetForm() {
     document.getElementById("fullName").value = "";
     document.getElementById("age").value = "";
     var gender = document.getElementsByClassName("gender");
-    for(index = 0; index<gender.length; index++)
+    for(var index = 0; index<gender.length; index++)
         gender[index].checked = false;
     document.getElementById("hobby").value = "";
     selectedRow = null;
@@ -55,7 +55,7 @@ function updateRecord(formData) {
 }
 function onDelete(td) {
     if(confirm("Are you sure to Delete this record?"))
-        row = td.parentElement.parentElement;
+        var row = td.parentElement.parentElement;
         document.getElementById("employeeList").deleteRow(row.rowIndex);
         resetForm();
 }
