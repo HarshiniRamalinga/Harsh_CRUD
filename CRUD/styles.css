@@ -14,15 +14,13 @@ body > table{
 table{
     border-collapse: collapse;
     margin: 10%;
+    border-style: solid;
+    background-color: white;
 }
 table.list{
     width:100%;
     margin: 1%;
     color: black;
-}
-table{
-    border-style: solid;
-    background-color: white;
 }
 .forms{
   margin:10%;
